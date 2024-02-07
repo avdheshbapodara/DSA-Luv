@@ -3,41 +3,29 @@ using namespace std;
 
 // Today's Date -
 // Leetcode Question Name -
+vector<string> vec;
 
 class Solution
 {
 public:
-     void sort012(int a[], int n)
+     void generate(string &s, int open, int close)
      {
-          int zeroPointer = 0, twoPointer = n - 1;
-          for (int currIndex = 0; currIndex <= twoPointer; currIndex++)
+          if(open<0 && close>=open)
           {
-               if (arr[currIndex] == 0)
-                    swap(arr[zeroPointer++], arr[currIndex]);
-               else if (arr[currIndex] == 2)
-                    swap(arr[twoPointer--], arr[currIndex--]);
-               else
-                    continue;
+               s.push_back('(');
+               open--;
           }
      }
 };
-// 012210
-//
 int main()
 {
-     // vector<int> vec = {};
      Solution solution;
-     int n = 10;
-     int arr[n] = {0, 0, 0, 0, 0, 1, 0, 0, 0, 1};
-
-     solution.sort012(arr, n);
-
-     // Print the elements of arr
-     for (int i = 0; i < n; i++)
+     int n;
+     cin >> n;
+     string s;
+     solution.generate(s, n, n);
+     for (auto &ele : vec)
      {
-          cout << arr[i] << " ";
+          cout << ele << endl;
      }
-     cout << endl;
-
-     return 0;
 }

@@ -25,12 +25,12 @@ void generate(string &s, int open, int close)
 
 int main()
 {
-    int n;
-    cin >> n;
-    string s;
-    generate(s,n,n);
-    for (auto &ele : vec)
-    {
-        cout << ele << endl;
-    }
+        int n;
+        cin >> n;
+        string s;
+        generate(s,n,n);
+        for (auto &ele : vec)
+        {
+            cout << ele << endl;
+        }
 }
