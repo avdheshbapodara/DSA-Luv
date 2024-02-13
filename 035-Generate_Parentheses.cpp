@@ -9,7 +9,7 @@ void generate(string &s, int open, int close)
         vec.push_back(s);
         return;
     }
-    if (open > 0)
+    if (open >= 0)
     {
         s.push_back('(');
         generate(s, open - 1, close);

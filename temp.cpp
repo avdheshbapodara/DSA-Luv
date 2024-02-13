@@ -10,10 +10,25 @@ class Solution
 public:
      void generate(string &s, int open, int close)
      {
-          if(open<0 && close>=open)
+          if(open==0 && close==0)
+          {
+               vec.push_back(s);
+               return;
+          }
+          if (open > 0)
           {
                s.push_back('(');
-               open--;
+               generate(s, open - 1, close);
+               s.pop_back();
+          }
+          if (close > 0)
+          {
+               if (close > open)
+               {
+                    s.push_back(')');
+                    generate(s, open, close - 1);
+                    s.pop_back();
+               }
           }
      }
 };
