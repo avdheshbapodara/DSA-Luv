@@ -33,9 +33,7 @@ int main()
     int to_find;
     cin >> to_find;
 
-    // bool temp = binary(vec, to_find);
-
-    if (binary(vec, to_find) == true)
+    if (binary(vec, to_find))
     {
         cout << "YES" << endl;
     }
